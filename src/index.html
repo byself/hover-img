@@ -7,7 +7,7 @@
     <style>
         .top-xf-box{
             position: fixed;
-            top: 0;
+            top: 20px;
             right: 300px;
         }
 
@@ -20,6 +20,7 @@
         }
 
         .top-xf-item a{
+            position: absolute;
             display: block;
             width: 100%;
             height: 100%;
@@ -100,12 +101,71 @@
         .top-xf-tel .top-xf-content img{
             margin-top: 20px;
         }
+
+        .top-xf-circle{
+            position: absolute;
+            width: 50px;
+            height: 50px;
+        }
+
+        .top-xf-circle .circle{
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(87, 139, 234, 0.15);
+        }
+
+        .top-xf-circle .circle-1 {
+            -webkit-animation: 4s circle cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: 4s circle cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-iteration-count: infinite;
+            animation-delay: 0s;
+        }
+
+        .top-xf-circle .circle-2 {
+            -webkit-animation: 4s circle cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: 4s circle cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation-iteration-count: infinite;
+            animation-delay: .5s;
+        }
+
+        @-webkit-keyframes circle {
+            0% {
+                transform: scale(1);
+                -webkit-transform: scale(1); }
+            50% {
+                transform: scale(9);
+                -webkit-transform: scale(9); }
+            100% {
+                transform: scale(1);
+                -webkit-transform: scale(1); } }
+        @keyframes circle {
+            0% {
+                transform: scale(1);
+                -webkit-transform: scale(1); }
+            50% {
+                transform: scale(9);
+                -webkit-transform: scale(9); }
+            100% {
+                transform: scale(1);
+                -webkit-transform: scale(1); } }
+
     </style>
 </head>
 <body>
 
+
+
+
     <div class="top-xf-box">
         <div class="top-xf-item top-xf-tel">
+            <div class="top-xf-circle">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
             <a href="javascript:void(0);">
                 <img src="images/icon-tel.png" />
                 <div class="top-xf-content">
@@ -118,6 +178,10 @@
 
         </div>
         <div class="top-xf-item top-xf-wechat">
+            <div class="top-xf-circle">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
             <a href="javascript:void(0);">
                 <img src="images/icon-wechat.png" />
                 <div class="top-xf-content">
