@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>二维码悬浮窗</title>
+
+    <style>
+        .top-xf-box{
+            position: fixed;
+            top: 0;
+            right: 300px;
+        }
+
+        .top-xf-item{
+            position: relative;
+            float: left;
+            margin: 0 12px;
+            width: 50px;
+            height: 50px;
+        }
+
+        .top-xf-item a{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #4e4e4e;
+            text-decoration: none;
+            color: #FFF;
+        }
+
+        .top-xf-item a:hover{
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #000;
+        }
+
+        .top-xf-item a:hover .top-xf-content{
+            display: block;
+        }
+
+        .top-xf-content{
+            display: none;
+            position: absolute;
+            top: 70px;
+            padding: 18px;
+            width: 112px;
+            text-align: center;
+            background-color: rgba(0, 0, 0, .5);
+        }
+
+        .top-xf-content::before{
+            content: "";
+            position: absolute;
+            top: -8px;
+            width: 0;
+            height: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 8px solid rgba(0, 0, 0, .5);
+
+        }
+
+        .top-xf-tel .top-xf-content{
+            left: 0;
+        }
+
+        .top-xf-tel .top-xf-content::before{
+            left: 20px;
+        }
+
+        .top-xf-wechat .top-xf-content{
+            right: 0;
+        }
+
+        .top-xf-wechat .top-xf-content::before{
+            right: 20px;
+        }
+
+        .top-xf-content h2{
+            margin-top: 0;
+            font-size: 14px;
+        }
+
+        .top-xf-content p{
+            margin: 10px 0;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+
+        .top-xf-content hr{
+            margin: 10px 0;
+            font-size: 14px;
+            border: 0;
+            border-top: 1px dashed #FFF;
+        }
+
+        .top-xf-tel .top-xf-content img{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-xf-box">
+        <div class="top-xf-item top-xf-tel">
+            <a href="javascript:void(0);">
+                <img src="images/icon-tel.png" />
+                <div class="top-xf-content">
+                    <p>4000006560</p>
+                    <hr />
+                    <p>4001070007</p>
+                    <img src="images/img-tel.png" alt="">
+                </div>
+            </a>
+
+        </div>
+        <div class="top-xf-item top-xf-wechat">
+            <a href="javascript:void(0);">
+                <img src="images/icon-wechat.png" />
+                <div class="top-xf-content">
+                    <h2>澳洲金鼎手机端</h2>
+                    <img src="images/img-erweima.jpg">
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
